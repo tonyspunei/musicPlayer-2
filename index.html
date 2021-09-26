@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jab Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Music Player</title>
+  </head>
+
+  <body>
+    <!--  -->
+    <div class="app">
+      <div class="container">
+        <div class="track-bar">
+          <div class="track-bar__fill"></div>
+        </div>
+
+        <!-- Player -->
+        <div class="player">
+          <!-- Header -->
+          <div class="player__header">
+            <!-- ThumbNail Image -->
+            <div class="player__thumbnail">
+              <img
+                class="player__img"
+                src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                alt=""
+              />
+            </div>
+
+            <!-- Player Detauls -->
+            <div class="player__details">
+              <h1 class="player__name">Jab Player</h1>
+              <div class="player__count-wrapper">
+                <span class="player__count">7</span> Songs
+              </div>
+
+              <!-- Play Button -->
+              <button class="button is-green player__trigger">Play</button>
+            </div>
+          </div>
+
+          <!-- Player Body - Music List etc. -->
+          <div class="player__body">
+            <ul class="playlist"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>

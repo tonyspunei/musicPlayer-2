@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
+:root {
+  --main-bg-color: #1a1a1a;
+  --main-font-color: white;
+  --secondary-font-color: #aaa;
+  --light-white: #eee;
+  --light-green: #33b75c;
+
+  --container-width: 768px;
+  --font-main-stack: Quicksand, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main-stack);
+  line-height: 1.5;
+}
+
+.button {
+  padding: 1rem 3.8rem;
+  border-radius: 3.4rem;
+  text-transform: uppercase;
+  border: 0;
+  opacity: 0.9;
+  transition: 0.1s all ease-in-out;
+}
+
+.button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.button.is-green {
+  background: var(--light-green);
+  color: var(--main-font-color);
+}
+
+.app {
+  background: linear-gradient(to bottom, #7d182f, #100206);
+  height: 100%;
+}
+
+/* TrackBar Styles */
+.track-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  transition: 0.1s all ease-in-out;
+}
+
+.track-bar__fill {
+  height: 6px;
+  width: 0%;
+  background: var(--light-green);
+}
+
+/* Player Styles */
+.player {
+  display: flex;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .player {
+    display: block;
+    height: unset;
+  }
+}
+
+.player__header {
+  flex: 1;
+  padding: 1.4rem;
+}
+
+.player__img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.player__details {
+  text-align: center;
+}
+
+.player__name {
+  color: var(--main-font-color);
+}
+
+.player__count-wrapper {
+  color: var(--secondary-font-color);
+  text-transform: uppercase;
+}
+
+.player__trigger {
+  margin: 1.4rem 0;
+}
+
+/* Playyer Body / Song list etc. */
+.player__body {
+  flex: 2;
+  padding: 1.4rem 0;
+}
+
+.playlist {
+  list-style-type: none;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.playlist__song {
+  display: flex;
+  justify-content: sp;
+  padding: 0.78rem 1rem;
+  transition: 0.3s all ease-in-out;
+}
+
+.playlist__song:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* active song */
+.playlist__song--active {
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--light-green);
+}
+
+.playlist__song--active div {
+  color: inherit;
+}
+
+.play-pause {
+  color: var(--main-font-color);
+  margin-right: 20px;
+}
+
+.playlist__song-name {
+  color: var(--main-font-color);
+}
+
+.playlist__song-artist {
+  color: var(--secondary-font-color);
+}
+
+.playlist__song-duration {
+  margin-left: auto;
+  color: var(--secondary-font-color);
+}
